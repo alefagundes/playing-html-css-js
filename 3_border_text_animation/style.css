@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 6em;
+    font-family: sans-serif;
+    text-shadow: 10px 10px 0px #150f61,
+                15px 15px 0px #1067cc,
+                20px 20px 0px #8fad00,
+                25px 25px 0px #faaf25,
+                45px 45px 10px #f1ffb0;
+    color: transparent;
+    cursor: pointer;
+    -webkit-text-stroke: 4px #d6f4f4;
+    transition: all 0.5s;
+}
+
+h2:hover {
+    text-shadow: none;
+}
+
+
+*{
+    background: rgb(115, 105, 255);
+}
