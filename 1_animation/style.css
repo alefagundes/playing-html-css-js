@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: grind;
+    place-items: center;
+    margin: 0;
+    background: #181818;
+}
+
+.wrapper {
+    display: grid;
+    place-items: end;
+    width: 100px;
+    height: 100px;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: rotate(45deg);
+    background-color: rgb(109, 109, 109);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+@keyframes tick-animation {
+    0%,
+    10% {transform: scaleX(0);}
+    30% {transform: scaleX(1);}
+    95% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.tick {
+    position: relative;
+    height: 14px;
+    width: 50px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    transform-origin: 0% 0%;
+    border-radius: 5px 5px 0 5px;
+    background: #24d600;
+    animation: tick-animation 4s infinite;
+}
+
+@keyframes tick-before-animation {
+    0%,
+    30% {transform: scaleY(0);}
+    45% {transform: scaleY(1);}
+
+}
+
+.tick::before {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    width: 14px;
+    height: 105px;
+    transform-origin: 0% 100%;
+    border-radius: inherit;
+    background: inherit;
+    animation: tick-before-animation 4s infinite;
+}
